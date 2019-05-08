@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  appengine-mysql:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql_db
+      MYSQL_USER: appengine
+      MYSQL_PASSWORD: appengine
+#     networks:
+#       - appengine-docker-network
+# networks:
+#   appengine-docker-network:
+#     external: true

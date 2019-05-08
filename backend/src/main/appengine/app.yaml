@@ -1,0 +1,19 @@
+runtime: java
+env: flex
+service: backend
+runtime_config:
+  jdk: openjdk8
+env_variables:
+  SPRING_PROFILES_ACTIVE: "gcp,mysql"
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+
+# https://groups.google.com/d/msg/google-appengine/Po_-SkC5DOE/EcXbFLayAQAJ  
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
