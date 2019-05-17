@@ -1,4 +1,4 @@
-package com.example.gateway;
+package com.example.gateway.gaeconfig;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
@@ -16,6 +16,7 @@ import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.conn.routing.HttpRoute;
 import org.apache.http.protocol.HttpContext;
 
+//from https://github.com/opendatakit/aggregate-components/tree/master/GaeHttpClient/src/main/java/org/opendatakit/http/conn
 public class GaeHttpClientConnectionManager implements HttpClientConnectionManager {
 
     /** URLFetchService handles all lifetime management */

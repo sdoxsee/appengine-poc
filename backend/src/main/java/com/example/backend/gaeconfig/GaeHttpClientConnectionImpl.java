@@ -1,9 +1,8 @@
-package com.example.gateway;
+package com.example.backend.gaeconfig;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.net.URL;
-
+import com.google.appengine.api.urlfetch.HTTPMethod;
+import com.google.appengine.api.urlfetch.URLFetchService;
+import com.google.appengine.api.urlfetch.URLFetchServiceFactory;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.Header;
@@ -27,10 +26,11 @@ import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 
-import com.google.appengine.api.urlfetch.HTTPMethod;
-import com.google.appengine.api.urlfetch.URLFetchService;
-import com.google.appengine.api.urlfetch.URLFetchServiceFactory;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.net.URL;
 
+//from https://github.com/opendatakit/aggregate-components/tree/master/GaeHttpClient/src/main/java/org/opendatakit/http/conn
 public class GaeHttpClientConnectionImpl implements HttpClientConnection {
 
     private static final Log logger = LogFactory.getLog(GaeHttpClientConnectionImpl.class);
