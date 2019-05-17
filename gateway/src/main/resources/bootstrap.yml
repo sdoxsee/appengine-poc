@@ -1,0 +1,22 @@
+zuul:
+  routes:
+    backend:
+      path: /api/backend/**
+      url: http://localhost:8081
+
+---
+spring:
+  profiles: default
+zuul:
+  routes:
+    backend:
+      url: http://localhost:8081
+
+
+---
+spring:
+  profiles: gcp
+zuul:
+  routes:
+    backend:
+      url: https://backend-dot-doxsee-project.appspot.com

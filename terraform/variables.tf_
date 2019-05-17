@@ -1,0 +1,19 @@
+variable "credentials" {
+  description = "Path to the GCP service account key"
+  default = "credentials/key.json"
+}
+
+variable "gcp_zone" {
+  description = "GCP zone, e.g. northamerica-northeast1-a (which must be in gcp_region)"
+  default = "northamerica-northeast1-a"
+}
+
+variable "gcp_region" {
+  description = "GCP region, e.g. northamerica-northeast1"
+  default = "northamerica-northeast1"
+}
+
+variable "gcp_project" {
+  description = "GCP project name"
+  default = "aharya-staging"
+}
