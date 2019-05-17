@@ -2,7 +2,6 @@ zuul:
   routes:
     backend:
       path: /api/backend/**
-      url: http://localhost:8081
 
 ---
 spring:
