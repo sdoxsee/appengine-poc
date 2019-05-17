@@ -76,6 +76,9 @@
 							<goal>deploy</goal>
 						</goals>
 						<phase>deploy</phase>
+						<configuration>
+							<deploy.version>alpha-001</deploy.version>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
